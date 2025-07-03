@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram UI</title>
+  <meta name="description" content="A simple Instagram UI clone with HTML, CSS, and JavaScript.">
+  <meta name="keywords" content="Instagram, UI, clone, HTML, CSS, JavaScript">
+  <meta name="author" content="Your Name">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Instagram UI Clone">
+  <meta property="og:description" content="A simple Instagram UI clone with HTML, CSS, and JavaScript.">
+  <meta property="og:image" content="https://example.com/instagram-ui-thumbnail.jpg">
+  <meta property="og:url" content="https://example.com/instagram-ui">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Instagram UI Clone">
+  <meta name="twitter:description" content="A simple Instagram UI clone with HTML, CSS, and JavaScript.">
+  <meta name="twitter:image" content="https://example.com/instagram-ui-thumbnail.jpg">
+  <meta name="twitter:site" content="@your_twitter_handle">
+  <meta name="twitter:creator" content="@your_twitter_handle">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Billabong&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1 class="logo">Instagram</h1>
+      <ul>
+        <li class="active"><i class="fas fa-home"></i> <span>Home</span></li>
+        <li onclick="toggleSearch()"><i class="fas fa-search"></i> Search</li>
+        <li><i class="fas fa-compass"></i> Explore</li>
+        <li><i class="fas fa-message"></i> Messages</li>
+        <li><i class="fas fa-heart"></i> Notifications</li>
+        <li><i class="fas fa-plus-square"></i> Create</li>
+        <li><i class="fas fa-user"></i> Profile</li>
+        <li><i class="fas fa-bars"></i> More</li>
+      </ul>
+    </div>
+    <div class="main-content">
+      <div class="search-bar" id="searchBar">
+        <input type="text" placeholder="Search here..." />
+      </div>
+      <div class="stories">
+    <div class="story"><img src="https://randomuser.me/api/portraits/women/85.jpg" alt="user_story_1" /><span>hima</span></div>
+    <div class="story"><img src="https://randomuser.me/api/portraits/women/45.jpg" alt="user_story_2" /><span>harini</span></div>
+    <div class="story"><img src="https://randomuser.me/api/portraits/women/75.jpg" alt="user_story_3" /><span>Tapaswi</span></div>
+    <div class="story"><img src="https://randomuser.me/api/portraits/women/32.jpg" alt="user_story_4" /><span>vyshu</span></div>
+    <div class="story"><img src="https://randomuser.me/api/portraits/women/66.jpg" alt="user_story_5" /><span>lalli</span></div>
+    <div class="story"><img src="https://randomuser.me/api/portraits/women/90.jpg" alt="user_story_6" /><span>nihari</span></div>
+  </div>
+
+  <div class="post">
+    <div class="post-header">
+      <div style="display: flex; align-items: center;">
+        <img src="https://randomuser.me/api/portraits/women/87.jpg" alt="user_01" class="pic" style="width: 32px; height: 32px; margin-right: 10px;" />
+        <b>alexandra_r</b>
+      </div>
+      <i class="fas fa-ellipsis-h"></i>
+    </div>
+    <div class="post-image">
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="Beach View" />
+    </div>
+    <div class="post-actions">
+      <i class="far fa-heart"></i>
+      <i class="far fa-comment"></i>
+      <i class="far fa-paper-plane"></i>
+    </div>
+    <div class="post-caption">
+      <b>alexandra_r</b> 🌊 Chasing sunsets and salty air. #BeachVibes #Summer
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-header">
+      <div style="display: flex; align-items: center;">
+        <img src="https://randomuser.me/api/portraits/men/35.jpg" alt="user_02" class="pic" style="width: 32px; height: 32px; margin-right: 10px;" />
+        <b>john_travels</b>
+      </div>
+      <i class="fas fa-ellipsis-h"></i>
+    </div>
+    <div class="post-image">
+      <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb" alt="Mountain Trek" />
+    </div>
+    <div class="post-actions">
+      <i class="far fa-heart"></i>
+      <i class="far fa-comment"></i>
+      <i class="far fa-paper-plane"></i>
+    </div>
+    <div class="post-caption">
+      <b>john_travels</b> 🏞️ A hike to remember! Nature never disappoints. #AdventureTime
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-header">
+      <div style="display: flex; align-items: center;">
+        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="user_03" class="pic" style="width: 32px; height: 32px; margin-right: 10px;" />
+        <b>emily_art</b>
+      </div>
+      <i class="fas fa-ellipsis-h"></i>
+    </div>
+    <div class="post-image">
+      <img src="https://images.unsplash.com/photo-1558888403-c5f9891c5a5a" alt="Sketchbook Drawing" />
+    </div>
+    <div class="post-actions">
+      <i class="far fa-heart"></i>
+      <i class="far fa-comment"></i>
+      <i class="far fa-paper-plane"></i>
+    </div>
+    <div class="post-caption">
+      <b>emily_art</b> ✏️ Just finished this new piece. Thoughts? #SketchbookSaturday
+    </div>
+  </div>
+  <div class="post">
+    <div class="post-header">
+      <div style="display: flex; align-items: center;">
+        <img src="https://randomuser.me/api/portraits/men/70.jpg" alt="user_04" class="pic" style="width: 32px; height: 32px; margin-right: 10px;" />
+        <b>foodie_rahul</b>
+      </div>
+      <i class="fas fa-ellipsis-h"></i>
+    </div>
+    <div class="post-image">
+      <img src="https://images.unsplash.com/photo-1543353071-873f17a7a088" alt="Tasty Burger" />
+    </div>
+    <div class="post-actions">
+      <i class="far fa-heart"></i>
+      <i class="far fa-comment"></i>
+      <i class="far fa-paper-plane"></i>
+    </div>
+    <div class="post-caption">
+      <b>foodie_rahul</b> 🍔 The juiciest burger I've ever had. Anyone else hungry? #FoodieFinds
+    </div>
+  </div>
+</div>
+    <div class="rightbar">
+      <div class="profile-suggest">
+        <div class="profile">
+          <div class="pic"><img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Your Profile" /></div>
+          <div class="details">
+            <p><b>your_name</b></p>
+            <p class="gray">Your Name</p>
+          </div>
+          <button>Switch</button>
+        </div>
+        <p class="suggest-text">Suggestions for you</p>
+        <div class="suggestion">
+          <div class="pic"><img src="https://randomuser.me/api/portraits/men/32.jpg" alt="friend_01" /></div>
+          <div class="details"><p><b>friend_01</b></p><p class="gray">Follows you</p></div>
+          <button>Follow</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
